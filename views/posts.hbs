@@ -2,9 +2,8 @@
     <div class="col-md-12">
         <h2>Posts</h2>
         <hr />
-
         <div class="table-responsive">
-            <table class="table ">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Post&nbsp;ID</th>
@@ -15,13 +14,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{#each posts}}
+                    {{#each posts}} 
                     <tr>
-                        <td>{{id}}</td>
-                        <td>{{title}}</td>
-                        <td>{{postDate}}</td>
-                        <td><a href="/posts?category={{category}}">{{category}}</a></td>
-                        <td>{{published}}</td>
+                        <td>{{this.id}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.postDate}}</td>
+                        <td><a href="/posts?category={{this.category}}">{{this.category}}</a></td>
+                        <td>{{this.published}}</td>
                     </tr>
                     {{/each}}
                 </tbody>
@@ -33,6 +32,4 @@
         <strong>{{message}}</strong>
     </div>
     {{/unless}}
-
-</div>
 </div>
